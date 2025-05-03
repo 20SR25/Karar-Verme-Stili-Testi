@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karar Verme Stili Testi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        .result {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            border-radius: 5px;
+        }
+        .button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Karar Verme Stili Testi</h1>
+    <form id="quizForm">
+        <div class="question">
+            <p>1. Bir karar aldığınızda, en çok hangi faktörü göz önünde bulundurursunuz?</p>
+            <label><input type="radio" name="q1" value="2"> A) Kendi içsel değerlerim ve duygularım.</label><br>
+            <label><input type="radio" name="q1" value="1"> B) Kararımın mantıklı ve verimli olup olmadığı</label>
+        </div>
+        <div class="question">
+            <p>2. Bir iş teklifi aldığınızda, hangi faktör sizin kararınızı en çok etkiler?</p>
+            <label><input type="radio" name="q2" value="2"> A) Teklifin kişisel hedeflerime ve değerlerime ne kadar uyduğu.</label><br>
+            <label><input type="radio" name="q2" value="1"> B) Teklifin finansal avantajları ve kariyerime nasıl etki edeceği.</label>
+        </div>
+        <div class="question">
+            <p>3. Bir seyahat planı yaparken, kararınızı nasıl alırsınız?</p>
+            <label><input type="radio" name="q3" value="2"> A) Gezi boyunca alacağım kişisel deneyimler ve kültürel zenginlikler.</label><br>
+            <label><input type="radio" name="q3" value="1"> B) Seyahatin maliyeti ve pratikliği.</label>
+        </div>
+        <div class="question">
+            <p>4. Bir arkadaşınız size tavsiyede bulunduğunda, onu nasıl değerlendirirsiniz?</p>
+            <label><input type="radio" name="q4" value="2"> A) Tavsiyenin bana ne kadar duygusal olarak hitap ettiğini.</label><br>
+            <label><input type="radio" name="q4" value="1"> B) Tavsiyenin mantıklı ve somut faydalarını.</label>
+        </div>
+        <div class="question">
+            <p>5. Bir konuda önemli bir karar alırken, genellikle nasıl hissedersiniz?</p>
+            <label><input type="radio" name="q5" value="2"> A) İçimdeki hislere ve duygusal yönlere güvenerek.</label><br>
+            <label><input type="radio" name="q5" value="1"> B) Olabildiğince mantıklı, stratejik ve planlı olarak.</label>
+        </div>
+        <div class="question">
+            <p>6. Bir problemi çözerken, hangi yaklaşımı benimsemeniz daha olasıdır?</p>
+            <label><input type="radio" name="q6" value="2"> A) Sorunun duygusal yönlerini anlayarak ve empati yaparak.</label><br>
+            <label><input type="radio" name="q6" value="1"> B) Sorunu nesnel ve mantıklı bir şekilde analiz ederek.</label>
+        </div>
+        <div class="question">
+            <p>7. Bir karar verdiğinizde, genellikle nasıl bir süreç izlersiniz?</p>
+            <label><input type="radio" name="q7" value="2"> A) Duygusal olarak kendimi nasıl hissedeceğimi düşünürüm.</label><br>
+            <label><input type="radio" name="q7" value="1"> B) Olası sonuçları mantıklı bir şekilde değerlendiririm.</label>
+        </div>
+        <div class="question">
+            <p>8. Bir iş veya proje için takım kurarken, hangi özellikleri ön planda tutarsınız?</p>
+            <label><input type="radio" name="q8" value="2"> A) Takımın uyumlu ve duygusal bağlarının güçlü olması.</label><br>
+            <label><input type="radio" name="q8" value="1"> B) Takım üyelerinin yetkinlikleri ve verimlilikleri.</label>
+        </div>
+        <div class="question">
+            <p>9. Bir karar verme sürecinde, genellikle hangi tür riskleri alırsınız?</p>
+            <label><input type="radio" name="q9" value="2"> A) Kişisel tatminim ve duygusal ihtiyaçlarım doğrultusunda risk alırım.</label><br>
+            <label><input type="radio" name="q9" value="1"> B) Kararımın mantıklı olması ve uzun vadeli avantajları önemli olduğundan, düşük risk almayı tercih ederim.</label>
+        </div>
+        <div class="question">
+            <p>10. Bir konuda önemli bir karar almak üzereyken, ne kadar süre düşünürsünüz?</p>
+            <label><input type="radio" name="q10" value="2"> A) Duygularımı dinleyerek hızlıca karar alırım.</label><br>
+            <label><input type="radio" name="q10" value="1"> B) Her yönüyle detaylıca analiz ederek kararımı veririm.</label>
+        </div>
+        <div class="question">
+            <p>11. Bir bireysel projede karar alırken, hangi yaklaşım daha baskındır?</p>
+            <label><input type="radio" name="q11" value="2"> A) Kendi içsel değerlerime uygun olup olmadığına karar veririm.</label><br>
+            <label><input type="radio" name="q11" value="1"> B) Projenin sonuçlarının mantıklı ve verimli olmasına odaklanırım.</label>
+        </div>
+        <div class="question">
+            <p>12. Bir konuda büyük bir değişiklik yapmayı düşündüğünüzde, neye odaklanırsınız?</p>
+            <label><input type="radio" name="q12" value="2"> A) Değişiklik bana ne kadar duygusal tatmin sağlar?</label><br>
+            <label><input type="radio" name="q12" value="1"> B) Değişikliğin bana ne kadar fayda sağlayacağı ve mantıklı olup olmadığı.</label>
+        </div>
+        <div class="question">
+            <p>13. Bir arkadaşınız size bir konuda fikir verdiğinde, genellikle nasıl tepki verirsiniz?</p>
+            <label><input type="radio" name="q13" value="2"> A) Onun duygusal durumuna ve kişisel bağlantımıza göre tepki veririm.</label><br>
+            <label><input type="radio" name="q13" value="1"> B) Fikrin mantıklı olup olmadığını değerlendirdikten sonra tepki veririm.</label>
+        </div>
+        <div class="question">
+            <p>14. Bir problemle karşılaştığınızda, çözüm için genellikle nasıl bir yol izlersiniz?</p>
+            <label><input type="radio" name="q14" value="2"> A) Durumu sezgisel olarak hissederim ve çözümü duygusal olarak ararım.</label><br>
+            <label><input type="radio" name="q14" value="1"> B) Sorunu detaylı bir şekilde analiz edip, mantıklı bir çözüm üretirim.</label>
+        </div>
+        <div class="question">
+            <p>15. Bir yatırım kararı aldığınızda, hangi faktör daha önemlidir?</p>
+            <label><input type="radio" name="q15" value="2"> A) Yatırımın kişisel hedeflerim ve değerlerimle uyumlu olması.</label><br>
+            <label><input type="radio" name="q15" value="1"> B) Yatırımın getirisinin ve riskinin ne kadar mantıklı olduğu.</label>
+        </div>
+        <div class="question">
+            <p>16. Bir tatil planı yaparken, nasıl karar verirsiniz?</p>
+            <label><input type="radio" name="q216" value="2"> A) Tatilin bana nasıl bir içsel tatmin ve huzur sağlayacağına bakarım.</label><br>
+            <label><input type="radio" name="q16" value="1"> B) Tatilin maliyeti ve ne kadar verimli olduğu hakkında düşünürüm.</label>
+        </div>
+        <div class="question">
+            <p>17. Bir konuda fikir ayrılığı yaşadığınızda, nasıl yaklaşırısınız?</p>
+            <label><input type="radio" name="q17" value="2"> A) Duygusal bakış açılarımı ve içsel hislerimi göz önünde bulundururum.</label><br>
+            <label><input type="radio" name="q17" value="1"> B) Durumu mantıklı bir şekilde analiz eder ve objektif bir çözüm bulmaya çalışırım.</label>
+        </div>
+        <div class="question">
+            <p>18. Bir konuda uzun vadeli bir karar almak üzereyken, hangi faktörü ön planda tutarsınız?</p>
+            <label><input type="radio" name="q18" value="2"> A) Kararın bana uzun vadede duygusal tatmin sağlayıp sağlamayacağı.</label><br>
+            <label><input type="radio" name="q18" value="1"> B) Kararın bana uzun vadede pratik faydalar sağlayıp sağlamayacağı.</label>
+        </div>
+        <div class="question">
+            <p>19. Bir iş yerinde terfi almayı düşünürken, hangi faktör sizin için daha belirleyicidir?</p>
+            <label><input type="radio" name="q19" value="2"> A) İşin bana ne kadar duygusal anlamda tatmin vereceği.</label><br>
+            <label><input type="radio" name="q19" value="1"> B) İşin bana finansal ve kariyersel olarak ne kadar fayda sağlayacağı.</label>
+        </div>
+        <div class="question">
+            <p>20. Bir sağlık kararı verirken, hangi yaklaşımı benimsemeniz daha olasıdır?</p>
+            <label><input type="radio" name="q20" value="2"> A) Kendi sağlığımı nasıl hissettiğimi ve kişisel değerlerimi düşünürüm.</label><br>
+            <label><input type="radio" name="q20" value="1"> B) Tıbbi veriler ve uzman görüşlerini değerlendirerek karar alırım.</label>
+        </div>
+        <button type="button" class="button" onclick="calculateResult()">Submit</button>
+    </form>
+    <div class="result" id="result"></div>
+
+    <script>
+        function calculateResult() {
+            let totalScore = 0;
+            const form = document.getElementById('quizForm');
+            const questions = form.querySelectorAll('input[type="radio"]:checked');
+            
+            if (questions.length < 20) { // Assuming there are 20 questions
+                alert("Lütfen tüm soruları cevaplayınız.");
+                return;
+            }
+            
+            questions.forEach(question => {
+                totalScore += parseInt(question.value, 10);
+            });
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = "block";
+
+            if (totalScore > 30) { // Example thresholds, adjust as needed
+                resultDiv.innerHTML = "<h2>Sonuç: Çoğunlukla A şıklarını seçtiniz!</h2>" +
+                    "<p>Bunun ne anlama geldiğini yakında açıklayacağız.</p>";
+            } else if (totalScore < 20) {
+                resultDiv.innerHTML = "<h2>Sonuç: Çoğunlukla B şıklarını seçtiniz!</h2>" +
+                    "<p>Bunun ne anlama geldiğini yakında açıklayacağız.</p>";
+            } else {
+                resultDiv.innerHTML = "<h2>Sonuç: Dengeli bir yaklaşımınız var.</h2>" +
+                    "<p>Bunun ne anlama geldiğini yakında açıklayacağız.</p>";
+            }
+        }
+    </script>
+</body>
+</html>
